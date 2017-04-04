@@ -17,12 +17,12 @@ parameters:
     type: string
     label: Key name
     description: Name of key-pair to be installed on the compute instance.
-    default: my_key
+    default: RPCRKey
   public_network:
     type: string
     label: Public network name or ID
     description: Public network to attach server to.
-    default: public
+    default: ext-net
   cluster_size:
     type: number
     label: Cluster size
