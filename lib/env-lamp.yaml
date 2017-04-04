@@ -1,0 +1,4 @@
+resource_registry:
+  Lib::MSG::MySQL: https://raw.githubusercontent.com/rax-rpcr/heat-forrester/master/mysql-centos.yaml
+  Lib::MSG::Wordpress: https://raw.githubusercontent.com/rax-rpcr/heat-forrester/master/wordpress-centos.yaml
+  Lib::MSG::FloatingIP: https://raw.githubusercontent.com/rax-rpcr/heat-forrester/master/floating_ip-centos.yaml
