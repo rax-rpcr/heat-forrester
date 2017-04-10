@@ -81,8 +81,8 @@ resources:
             #!/bin/bash -ex
 
             # install dependencies
-            #apt-get update
-            #apt-get -y install build-essential python python-dev python-virtualenv supervisor haproxy
+            apt-get update
+            apt-get -y install build-essential python python-dev python-virtualenv supervisor haproxy
 
             sed -i 's/ENABLED=0/ENABLED=1/' /etc/default/haproxy
 
