@@ -63,6 +63,10 @@ resources:
         - protocol: tcp
           port_range_min: 3306
           port_range_max: 3306
+        - protocol: icmp
+        - protocol: tcp
+          port_range_min: 22
+          port_range_max: 22
  
   port:
     type: OS::Neutron::Port
