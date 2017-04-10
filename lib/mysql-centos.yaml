@@ -33,16 +33,6 @@ parameters:
     description: Name of the database user.
  
 resources:
-  wait_condition:
-    type: OS::Heat::WaitCondition
-    properties:
-      handle: { get_resource: wait_handle }
-      count: 1
-      timeout: 120
- 
-  wait_handle:
-    type: OS::Heat::WaitConditionHandle
-
   mysql_root_password:
     type: OS::Heat::RandomString
     properties:
@@ -91,7 +81,6 @@ resources:
             __database_name__: { get_param: database_name }
             __database_user__: { get_param: database_user }
             __database_password__: { get_attr: [database_password, value] }
-            wc_notify: { get_attr: ['wait_handle', 'curl_cli'] }
           template: |
             #!/bin/bash
 
@@ -119,8 +108,6 @@ resources:
             FLUSH PRIVILEGES;
             EOF
  
-            # notify heat that we are done here
-            wc_notify --data-binary '{"status": "SUCCESS"}'
 
 outputs:
   name:
