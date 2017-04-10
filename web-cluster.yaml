@@ -7,7 +7,7 @@ parameters:
     type: string
     label: Image name or ID
     description: Image to be used for server. Please use an Ubuntu based image.
-    default: trusty-server-cloudimg-amd64
+    default: trusty-server-cloudimg-snapshot4
   flavor:
     type: string
     label: Flavor

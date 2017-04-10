@@ -68,8 +68,8 @@ resources:
             #!/bin/bash -ex
 
             # install dependencies
-            apt-get update
-            apt-get -y install build-essential python python-dev python-virtualenv nginx supervisor git
+            #apt-get update
+            #apt-get -y install build-essential python python-dev python-virtualenv nginx supervisor git
 
             # create a tiny user to run the server process
             adduser --disabled-password --gecos "" tiny
