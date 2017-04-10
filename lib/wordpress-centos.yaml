@@ -22,7 +22,7 @@ parameters:
     type: string
     label: Private network name or ID
     description: Network to attach server to.
-    default: int-net
+    default: private
   mysql_server:
     type: string
     label: MySQL database server
